@@ -93,18 +93,18 @@ int OnInit()
    }
    string name = AccountInfoString(ACCOUNT_NAME);
    string account = IntegerToString(AccountInfoInteger(ACCOUNT_LOGIN));  
-   for (int i=0; i<ArraySize(allowed_names); i++)
-   if (name == allowed_names[i] || account == allowed_names[i]) 
-       { 
-         password_status = 1;
-         Comment(StringFormat("Autenticado: %s",name)); 
-         break;
-       }  
-   if (password_status == -1) 
-      {
-      Alert ("Nome não autenticado."); 
-      return INIT_FAILED;
-      } 
+ //  for (int i=0; i<ArraySize(allowed_names); i++)
+ //  if (name == allowed_names[i] || account == allowed_names[i]) 
+ //      { 
+ //        password_status = 1;
+//         Comment(StringFormat("Autenticado: %s",name)); 
+ //        break;
+ //      }  
+ //  if (password_status == -1) 
+ //     {
+ //     Alert ("Nome não autenticado."); 
+ //     return INIT_FAILED;
+ //     } 
    if(VWAPPeriod==0)
    {
       return INIT_FAILED;
